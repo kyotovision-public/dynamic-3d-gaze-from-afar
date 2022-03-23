@@ -55,7 +55,7 @@ The file size of the generated container file (`gafa.sif` in this example) will 
 ### Download 
 
 We provide the raw data and preprocessed data. **As the raw data is so large (1.7 TB), we recommend you to use the preprocessed data (8.2 GB), which contain cropped human images.** If you would like to use your own cropping or head detection models, please use the raw data. 
-   - Preprocessed data: [Download all sequence (8.2GB)](https://uno.teracloud.jp/share/116190d7bcf40e53)
+   - Preprocessed data: [Download all sequence (8.2GB)](https://drive.google.com/file/d/1ef8uKVlq4jLKGZ2gVLDwHx6u0HayPTZf/view?usp=sharing)
    - Raw data: [Library](), [Lab](), [Kitchen](), [Courtyard](), [Living room]() 
 
 ### Raw data
