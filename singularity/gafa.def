@@ -1,0 +1,73 @@
+Bootstrap: docker
+From: pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel
+
+%post
+
+export DEBIAN_FRONTEND=noninteractive
+
+# Install some basic utilities
+apt-get update && apt-get install -y \
+    ca-certificates \
+    cmake \
+    curl \
+    sudo \
+    git \
+    bzip2 \
+    libx11-6 \
+    vim \
+    ffmpeg \
+    fonts-ipaexfont \
+    wget \
+    software-properties-common \
+    locales \
+    fish \
+    x11-apps \
+    g++ \
+    make \
+    unzip \
+    ssh \
+    sshfs \
+    iputils-ping \
+    net-tools \
+    kmod \
+ && rm -rf /var/lib/apt/lists/*
+
+pip install --upgrade pip
+pip install tqdm \
+      comet-ml \
+      flake8 \
+      autopep8 \
+      h5py \
+      Cython \
+      pycocotools \
+      line_profiler \
+      dlib \
+      japanize-matplotlib \
+      astropy \
+      cdflib \
+      black \
+      albumentations \
+      kornia \
+      lmdb \
+      efficientnet_pytorch \
+      comet-ml \
+      ipywidgets \
+      jupyterlab \
+      matplotlib \
+      nodejs \
+      opencv-python \
+      opencv-contrib-python \
+      pandas \
+      scikit-learn \
+      seaborn \
+      numba \
+      rich \
+      chumpy \
+      deepspeed \
+      imutils \
+      addict 
+pip install pytorch-lightning['extra']
+
+# set locale
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
