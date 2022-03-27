@@ -61,7 +61,7 @@ We provide the raw data and preprocessed data. **As the raw data is so large (1.
      - [Lab         (112GB, MD5:b7615f8cb574a7247ed3126efef05c7f)](https://drive.google.com/file/d/1Q3RK2A9RS8e1N9zbGWmSfqYeBemH0g_P/view?usp=sharing)
      - [Kitchen     (132GB, MD5:4235f7e1087fd7ea2db2b9468ec9ff3e)](https://drive.google.com/file/d/1Uzt5X42UkWTX78OtGX06s_wRNAW9XinP/view?usp=sharing)
      - [Courtyard   (436GB, MD5:44064946e21a1bc900bbcd921dfd7614)](https://drive.google.com/file/d/13cvbBbaTEGrlQlBGYI7XJ5A6h6S7e9ug/view?usp=sharing)
-     - [Living room ( 35GB), MD5:fbdb0b445bfbe6d9b4ddf5faa950b9fe](https://drive.google.com/file/d/1uZYt4_GOKdsZrEcemoXjLlnDS6IWINl5/view?usp=sharing) 
+     - [Living room  (35GB, MD5:fbdb0b445bfbe6d9b4ddf5faa950b9fe)](https://drive.google.com/file/d/1uZYt4_GOKdsZrEcemoXjLlnDS6IWINl5/view?usp=sharing) 
 
 ### Raw data
 
