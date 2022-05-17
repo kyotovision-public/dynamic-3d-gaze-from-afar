@@ -133,7 +133,7 @@ singularity shell --nv ./singularity/gafa.sif --port 12345
 
 ### Evaluation with the GAFA dataset
 
-Please download the weights of the pretrained models from [here](), and place the `.pth` files to `models/weights`. 
+Please download the weights of the pretrained models from [here](https://drive.google.com/file/d/1oJVaaNoMo9_qoo7q1z1ek1y-gjXwy55O/view?usp=sharing), and place the `.pth` files to `models/weights`. 
 
 We can then evaluate the accuracy of the estimated gaze direction with our model. 
 ```
