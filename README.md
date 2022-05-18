@@ -52,22 +52,22 @@ The file size of the generated container file (`gafa.sif` in this example) will 
 
 ![preview](img/cover.png "preview")
 
-### Download 
+### Download
 
-We provide the raw data and preprocessed data. **As the raw data is so large (1.7 TB), we recommend you to use the preprocessed data (5.9 GB), which contain cropped human images.** If you would like to use your own cropping or head detection models, please use the raw data. 
+We provide the raw data and preprocessed data. **As the raw data is so large (1.7 TB), we recommend you to use the preprocessed data (5.9 GB), which contain cropped human images.** If you would like to use your own cropping or head detection models, please use the raw data.
    - Preprocessed data: [Download all sequence (5.9GB, MD5:85b64a64c7f8c367bf0d3cffbaf3d693)](https://drive.google.com/file/d/1ef8uKVlq4jLKGZ2gVLDwHx6u0HayPTZf/view?usp=sharing)
    - Raw data:
      - [Library     (926GB, MD5:c84ec31749189359b32e69a881f27cb8)](https://drive.google.com/file/d/1Q3Y5EVRKpulOYTXGlh0M5KrMhAjHvVb8/view?usp=sharing)
      - [Lab         (112GB, MD5:b7615f8cb574a7247ed3126efef05c7f)](https://drive.google.com/file/d/1Q3RK2A9RS8e1N9zbGWmSfqYeBemH0g_P/view?usp=sharing)
      - [Kitchen     (132GB, MD5:4235f7e1087fd7ea2db2b9468ec9ff3e)](https://drive.google.com/file/d/1Uzt5X42UkWTX78OtGX06s_wRNAW9XinP/view?usp=sharing)
      - [Courtyard   (436GB, MD5:44064946e21a1bc900bbcd921dfd7614)](https://drive.google.com/file/d/13cvbBbaTEGrlQlBGYI7XJ5A6h6S7e9ug/view?usp=sharing)
-     - [Living room  (35GB, MD5:fbdb0b445bfbe6d9b4ddf5faa950b9fe)](https://drive.google.com/file/d/1uZYt4_GOKdsZrEcemoXjLlnDS6IWINl5/view?usp=sharing) 
+     - [Living room  (35GB, MD5:fbdb0b445bfbe6d9b4ddf5faa950b9fe)](https://drive.google.com/file/d/1uZYt4_GOKdsZrEcemoXjLlnDS6IWINl5/view?usp=sharing)
 
 ### Raw data
 
-We provide the raw surveillance videos, calibration data (camera intrinsics and extrainsics), and annotation data (gaze/head/body directions). Our dataset contains 5 daily scenes, *lab, library, kitchen, courtyard, and living room*. 
+We provide the raw surveillance videos, calibration data (camera intrinsics and extrainsics), and annotation data (gaze/head/body directions). Our dataset contains 5 daily scenes, *lab, library, kitchen, courtyard, and living room*.
 
-The data is organized as follows. 
+The data is organized as follows.
 
 ```
 data/raw_data
@@ -93,9 +93,9 @@ data/raw_data
 └── kitchen/
 ```
 
-Data is stored in five scenes (e.g. `library/`). 
-- Each scene is subdivided by shooting session (e.g. `1026_3/`). 
-- Each session is stored frame by frame with images taken from each camera (e.g. `Camera1_0, Camera2_0, ..., Caemra8_0`). 
+Data is stored in five scenes (e.g. `library/`).
+- Each scene is subdivided by shooting session (e.g. `1026_3/`).
+- Each session is stored frame by frame with images taken from each camera (e.g. `Camera1_0, Camera2_0, ..., Caemra8_0`).
    - For example, `Camera1_0/000000.jpg` and `Camera2_0/000000.jpg` contain images of a person as seen from each camera at the same time.
    - In some cases, we further divided the session into multiple subsessions (e.g. `Camera1_1, Camera1_2, ...`)
 - The calibration data of each camera and annotation data (gaze, head, and body directions) in the camera coordinate are stored in a pickle file (e.g. `Caera1_0.pkl`).
@@ -103,18 +103,18 @@ Data is stored in five scenes (e.g. `library/`).
 
 ### Preprocessed data
 
-The preprocessed data are stored in a similar format as the raw data, but each frame contains cropped person images. 
+The preprocessed data are stored in a similar format as the raw data, but each frame contains cropped person images.
 
-We also provide a script to preprocess raw data as [data/preprocessed/preprocess.py](data/preprocessed/preprocess.py). 
+We also provide a script to preprocess raw data as [data/preprocessed/preprocess.py](data/preprocessed/preprocess.py).
 
 
 ## Usage
 
-### Demo 
+### Demo
 
 Please open the following Jupyter notebooks.
-* [`demo.ipynb`](demo.ipynb): Demo code for end-to-end gaze estimation with our proposed model. 
-* [`dataset-demo.ipynb`](./data/dataset-demo.ipynb): Demo code to visualize annotations of the GAFA dataset. 
+* [`demo.ipynb`](demo.ipynb): Demo code for end-to-end gaze estimation with our proposed model.
+* [`dataset-demo.ipynb`](./data/dataset-demo.ipynb): Demo code to visualize annotations of the GAFA dataset.
 
 In case you have built your singularity container as mentioned above, you can launch `jupyter` in `singularity` by
 ```
@@ -133,12 +133,12 @@ singularity shell --nv ./singularity/gafa.sif --port 12345
 
 ### Evaluation with the GAFA dataset
 
-Please download the weights of the pretrained models from [here](https://drive.google.com/file/d/1oJVaaNoMo9_qoo7q1z1ek1y-gjXwy55O/view?usp=sharing), and place the `.pth` files to `models/weights`. 
+Please download the weights of the pretrained models from [here](https://drive.google.com/file/d/1oJVaaNoMo9_qoo7q1z1ek1y-gjXwy55O/view?usp=sharing), and place the `.pth` files to `models/weights`.
 
-We can then evaluate the accuracy of the estimated gaze direction with our model. 
+We can then evaluate the accuracy of the estimated gaze direction with our model.
 ```
 python eval.py \
-   -- gpus 1 (If no GPU is available, set -1) \
+   --gpus 1 (If no GPU is available, set -1)
 
 # Result
 MAE (3D front):  20.697409
@@ -156,9 +156,9 @@ You can train our model with the GAFA dataset by
 python train.py \
    --epoch 10 \
    --n_frames 7 \
-   --gpus 2 
+   --gpus 2
 ```
 
-It will consume 24GB for each GPUs, and takes about 24 hours for training. As we implement our model using `distributed data parallel` functionality in PyTorch Lightning, you can speed up the training by adding more GPUs. 
+It will consume 24GB for each GPUs, and takes about 24 hours for training. As we implement our model using `distributed data parallel` functionality in PyTorch Lightning, you can speed up the training by adding more GPUs.
 
-If your GPU's VRAM is less than 24 GB, please switch the model to `data parallel` mode by changing `strategy="ddp"` in `train.py` to `strategy="dp"`. 
+If your GPU's VRAM is less than 24 GB, please switch the model to `data parallel` mode by changing `strategy="ddp"` in `train.py` to `strategy="dp"`.
