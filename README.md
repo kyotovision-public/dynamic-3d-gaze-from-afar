@@ -7,11 +7,11 @@ Please note that this is research software and may contain bugs or other issues 
 ```
 @InProceedings{Nonaka_2022_CVPR,
     author    = {Nonaka, Soma and Nobuhara, Shohei and Nishino, Ko},
-    title     = {Dynamic 3D Gaze from Afar: Deep Gaze Estimation from Temporal Eye-Head-Body Coordination},
+    title     = {Dynamic 3D Gaze From Afar: Deep Gaze Estimation From Temporal Eye-Head-Body Coordination},
     booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
     month     = {June},
     year      = {2022},
-    pages     = {}
+    pages     = {2192-2201}
 }
 ```
 
