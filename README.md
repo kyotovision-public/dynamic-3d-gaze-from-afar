@@ -52,6 +52,9 @@ The file size of the generated container file (`gafa.sif` in this example) will 
 
 ![preview](img/cover.png "preview")
 
+### License
+The GAFA dataset is provided under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/).
+
 ### Download
 
 We provide the raw data and preprocessed data. **As the raw data is so large (1.7 TB), we recommend you to use the preprocessed data (5.9 GB), which contain cropped human images.** If you would like to use your own cropping or head detection models, please use the raw data.
@@ -162,3 +165,4 @@ python train.py \
 It will consume 24GB for each GPUs, and takes about 24 hours for training. As we implement our model using `distributed data parallel` functionality in PyTorch Lightning, you can speed up the training by adding more GPUs.
 
 If your GPU's VRAM is less than 24 GB, please switch the model to `data parallel` mode by changing `strategy="ddp"` in `train.py` to `strategy="dp"`.
+
