@@ -55,6 +55,9 @@ The file size of the generated container file (`gafa.sif` in this example) will 
 ### License
 The GAFA dataset is provided under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/).
 
+### Ethical approval
+The GAFA dataset is collected under approval by the Research Ethics Committee of the Graduate School of Informatics, Kyoto University (KUIS-EAR-2020-002).
+
 ### Download
 
 We provide the raw data and preprocessed data. **As the raw data is so large (1.7 TB), we recommend you to use the preprocessed data (5.9 GB), which contain cropped human images.** If you would like to use your own cropping or head detection models, please use the raw data.
