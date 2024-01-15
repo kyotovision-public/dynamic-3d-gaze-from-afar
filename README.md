@@ -96,15 +96,17 @@ data/raw_data
 ├── lab/
 ├── courtyard/
 ├── living_room/
-└── kitchen/
+├── kitchen/
+└── intrinsics.npz
 ```
 
 Data is stored in five scenes (e.g. `library/`).
 - Each scene is subdivided by shooting session (e.g. `1026_3/`).
 - Each session is stored frame by frame with images taken from each camera (e.g. `Camera1_0, Camera2_0, ..., Caemra8_0`).
    - For example, `Camera1_0/000000.jpg` and `Camera2_0/000000.jpg` contain images of a person as seen from each camera at the same time.
-   - In some cases, we further divided the session into multiple subsessions (e.g. `Camera1_1, Camera1_2, ...`)
+   - In some cases, we further divided the session into multiple subsessions (e.g. `Camera1_1, Camera1_2, ...`).
 - The calibration data of each camera and annotation data (gaze, head, and body directions) in the camera coordinate are stored in a pickle file (e.g. `Caera1_0.pkl`).
+- The cameras share a single intrinsic parameter given in [`intrinsics.npz`](data/raw_data/intrinsics.npz).
 
 
 ### Preprocessed data
